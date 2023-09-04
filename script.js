@@ -12,6 +12,43 @@ window.onscroll = function () {
     }
 };
 
+document.addEventListener('DOMContentLoaded', () => {
+  const burger = document.querySelector('.burger'); //always display:block !!
+
+  const navLinks = document.querySelector('.nav-links');
+  const headerlinks =document.querySelectorAll('.header-links');
+  const menu = document.querySelector('.menu');
+
+
+
+  headerlinks.forEach(item => {
+    item.addEventListener('click', () => {
+      navLinks.style.display = 'none';
+      menu.style.display = 'none'; // Hide the overlay
+      document.body.style.overflow = ''; // Restore scrolling
+});
+});
+    
+
+menu.addEventListener('click', () => {
+  navLinks.style.display = 'none';
+  menu.style.display = 'none'; // Hide the overlay
+  document.body.style.overflow = ''; // Restore scrolling
+});
+
+burger.addEventListener('click', () => {
+  if (menu.style.display === 'block') {
+    navLinks.style.display = 'none';
+    menu.style.display = 'none'; // Hide the overlay
+    document.body.style.overflow = ''; // Restore scrolling
+  } else {
+    menu.style.display = 'block'; // Show the overlay
+    navLinks.style.display = 'block';
+    document.body.style.overflow = 'hidden'; // Prevent scrolling
+  }
+});
+});
+
 ///////////////////////////////////////////////////////////////////
 let slideIndex = 1;
 showSlides(slideIndex);
@@ -111,42 +148,7 @@ function showSlides(n) {
 //   }
 // })
 
-document.addEventListener('DOMContentLoaded', () => {
-  const burger = document.querySelector('.burger'); //always display:block !!
 
-  const navLinks = document.querySelector('.nav-links');
-  const headerlinks =document.querySelectorAll('.header-links');
-  const menu = document.querySelector('.menu');
-
-
-
-  headerlinks.forEach(item => {
-    item.addEventListener('click', () => {
-      navLinks.style.display = 'none';
-      menu.style.display = 'none'; // Hide the overlay
-      document.body.style.overflow = ''; // Restore scrolling
-});
-});
-    
-
-menu.addEventListener('click', () => {
-  navLinks.style.display = 'none';
-  menu.style.display = 'none'; // Hide the overlay
-  document.body.style.overflow = ''; // Restore scrolling
-});
-
-burger.addEventListener('click', () => {
-  if (menu.style.display === 'block') {
-    navLinks.style.display = 'none';
-    menu.style.display = 'none'; // Hide the overlay
-    document.body.style.overflow = ''; // Restore scrolling
-  } else {
-    menu.style.display = 'block'; // Show the overlay
-    navLinks.style.display = 'block';
-    document.body.style.overflow = 'hidden'; // Prevent scrolling
-  }
-});
-});
 
 // allow menu to close when selecting the burger icon 
 // show the menue title when menu is show in parallel
