@@ -1,16 +1,17 @@
 body{
-    margin: auto;
+    margin: 0;
+    padding:0;
     transition: overflow 0.3s ease;    
 }
 
 html{
-    scroll-behavior: smooth;
+    scroll-behavior:smooth;
 }
 /* everything related to the header of the website including the logo  */
 #navbar{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content:space-between;
     align-items: center;
     padding-top: 5px;
     position: fixed;
@@ -54,8 +55,11 @@ header a{
 }
 
 #logo{
+    padding:0;
+    margin:0;
     height: 100px; 
-    max-width: 200px;
+    margin-right: 0.1rem;
+    margin-top:2rem;
 }
 
 #logo img{
@@ -63,11 +67,7 @@ header a{
     width: 100%;
     height: 100%;
     object-fit: contain;
-    padding:0;
-    margin:0;
-    top:0;
-    right: 0;   
-    margin: 0.3rem;
+
 
 }
 
@@ -469,6 +469,7 @@ textarea {
     align-items: center; 
     justify-content: center;
     text-decoration: none;
+    list-style:none;
     color:#2c2a2a
 }
 
@@ -592,6 +593,7 @@ h2{
     /* overflow: hidden; prevnts scrolling */
   }
   .burger {
+    position: inherit;
     display: block; 
     cursor: pointer;
     margin-top: 0.4rem;
@@ -615,10 +617,10 @@ header li:first-child {
 #logo{
     top:0;
     right:0;
-    margin-right: 0.2rem;
     margin-top: 1.2rem;
-    margin-left: auto;
-}
+    margin-left: -0.2rem;
+    margin-right: 10px;
+} 
 
 
 .bar{
