@@ -463,6 +463,8 @@ textarea {
     font-size: 0.75rem;
     align-items: center; 
     justify-content: center;
+    text-decoration: none;
+    color:#2c2a2a;
 }
 
 
